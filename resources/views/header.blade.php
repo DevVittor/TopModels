@@ -2,7 +2,7 @@
     <div class="
     flex flex-col border-r-2 h-screen bg-white pt-10 pb-10
     border-gray-50 justify-between items-center ">
-        <div class="">
+        <div class="block">
             <a href="/"><h1 class="text-rosa font-bold uppercase text-3xl"><i class="bi bi-balloon-heart pr-1.5"></i>Abrime</h1></a>
         </div>
         <div class="w-full">

@@ -5,7 +5,6 @@
 
 <main>
     @include('card')
-
 </main>
 
 
