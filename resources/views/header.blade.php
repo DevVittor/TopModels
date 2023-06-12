@@ -7,7 +7,7 @@
         </div>
         <div class="w-full">
             <div class="flex flex-col items-center">
-                <img class="h-24 object-cover aspect-auto border-tres border-rosa w-24 rounded-full" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img class="h-24 pointer-events-none object-cover aspect-auto border-tres border-rosa w-24 rounded-full" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 <div class="mt-5 flex gap-2 items-center">
                     <h2 class="text-lg">Nome completo</h2>
                     <img class="h-6 w-6 object-cover" src="/img/check.png" alt="" title="Verificada">
@@ -30,14 +30,21 @@
                 </div>
                 <hr class="mb-5 mt-5 border-2 border-gray-50 w-4/5">
             </div>
-            <div class=" w-full ">
+            <div class="block">
                 <nav>
-                    <ul class="flex flex-col gap-5 justify-center items-center">
-                        <li class="text-gray-300 text-lg text-center w-full border-l-8 border-white"><a href="#" class="hover:text-black hover:delay-200 hover:transtiion-all font-semibold text-gray-300"><i class="bi bi-house-door-fill pr-5 text-gray-300"></i>Feed</a></li>
-                        <li class="text-gray-500 text-lg text-center w-full border-l-8 border-rosa"><a href="#" class="hover:text-black hover:delay-200 hover:transtiion-all font-semibold text-black"><i class="bi bi-search pr-5 text-gray-300"></i>Explore</a></li>
-                        <li class="text-gray-300 text-lg text-center w-full border-l-8 border-white"><a href="#" class="hover:text-black hover:delay-200 hover:transtiion-all font-semibold text-gray-300"><i class="bi bi-bell-fill pr-5 text-gray-300"></i>Notifications</a></li>
-                        <li class="text-gray-300 text-lg text-center w-full border-l-8 border-white"><a href="#" class="hover:text-black hover:delay-200 hover:transtiion-all font-semibold text-gray-300"><i class="bi bi-send-fill pr-5 text-gray-300"></i>Direct</a></li>
-                        <li class="text-gray-300 text-lg text-center w-full border-l-8 border-white"><a href="#" class="hover:text-black hover:delay-200 hover:transtiion-all font-semibold text-gray-300"><i class="bi bi-person-circle pr-5 text-gray-300"></i>Perfil</a></li>
+                    <ul class="flex flex-col gap-2.5 justify-center items-center">
+                       <li>
+                            <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
+                       </li>
+                       <li>
+                            <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
+                       </li>
+                       <li>
+                        <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
+                       </li>
                     </ul>
                 </nav>
             </div>

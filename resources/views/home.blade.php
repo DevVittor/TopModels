@@ -7,7 +7,4 @@
     @include('card')
 </main>
 
-
-
-    
 @endsection
