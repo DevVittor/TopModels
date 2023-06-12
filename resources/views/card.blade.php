@@ -1,4 +1,27 @@
 <section>
+  <div class="flex items-start p-3 gap-3 flex-col">
+    <div class="">
+      <input type="text" name="" id="" placeholder="Quem você procura ?">
+    </div>
+    <div class="flex items-center">
+      <div class="">
+        <select name="" id="">
+          <option value="" selected disabled>Gênero</option>
+          <option value="">Todos</option>
+          <option value="">Homens</option>
+          <option value="">Mulher</option>
+          <option value="">Trans</option>
+        </select>
+      </div>
+      <div class="">
+        <input type="range" value="18" name="" min="18" max="80" id="idade" oninput="rangevalue.value = value">
+        <output id="rangevalue"></output>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<section>
 
     <div class="flex min-h-full h-auto items-center p-3 justify-center ">
         <div class="grid grid-cols-2 gap-2.5 md:grid-cols-2 lg:grid-cols-6">

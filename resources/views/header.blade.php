@@ -37,7 +37,7 @@
                             <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
                        </li>
                        <li>
-                            <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
+                            <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Sobre</a>
                        </li>
                        <li>
                         <a href="#" class="text-black text-base font-medium"><i class="bi bi-house-door-fill pr-4"></i>Início</a>
