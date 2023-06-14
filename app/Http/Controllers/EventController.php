@@ -14,4 +14,8 @@ class EventController extends Controller
     {
         return view('acompanhantes');
     }
+    public function profile()
+    {
+        return view('profile');
+    }
 }

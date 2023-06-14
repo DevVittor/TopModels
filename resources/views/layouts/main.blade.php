@@ -13,7 +13,7 @@
     @vite('resources/css/app.css')
     <title>@yield('title')</title>
 </head>
-<body class="flex">
+<body>
     @include('header')
     @yield('content')
 </body>

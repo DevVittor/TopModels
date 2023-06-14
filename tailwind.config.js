@@ -10,6 +10,9 @@ module.exports = {
             padding: {
                 "10px-25px": "10px 25px",
                 "10px-120px": "10px 120px",
+                "10px-80px": "10px 80px",
+                "0px-120px": "0px 120px",
+                "0px-50px": "0px 50px",
                 "20px-120px": "20px 120px",
                 "20px-0px": "20px 0px",
                 "3px-15px": "3px 15px",
@@ -24,10 +27,12 @@ module.exports = {
             },
             width: {
                 limite: "1819px",
+                noventacinco: "95%",
             },
             backgroundColor: {
                 pink: "#EF375D",
                 azul: "#428cd8",
+                cinza: "#e8e8e8",
             },
             borderColor: {
                 rosa: "#EF375D",
@@ -35,6 +40,7 @@ module.exports = {
             height: {
                 noventa: "85%",
                 dez: "15%",
+                profileheader: "862px",
             },
             borderWidth: {
                 tres: "3px",

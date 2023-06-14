@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .header {
+        @apply sticky top-0 h-screen w-52 bg-white sm:w-60  md:w-64 xl:w-72 2xl:w-80 z-50;
+    }
+    .logo {
+        @apply text-rosa font-bold uppercase text-3xl;
+    }
+    .icon-logo {
+        @apply pr-1.5;
+    }
+    .container-header {
+        @apply flex flex-col border-r-2 h-screen pt-10 pb-10
+        pr-5 pl-5 border-gray-50 justify-between;
+    }
+    .img-profile {
+        @apply h-72 pointer-events-none object-cover aspect-auto w-52 rounded-lg;
+    }
+    .container-name-profile {
+        @apply mt-5 flex gap-2 bg-yellow-300;
+    }
+    .menu {
+        @apply flex flex-col gap-2.5 justify-center items-center;
+    }
+    .direitos {
+        @apply text-black hover:text-rosa hover:cursor-pointer transition-all hover:underline;
+    }
+    .container-social-direitos {
+        @apply flex justify-center items-center flex-col gap-5;
+    }
+    .container-social {
+        @apply bg-yellow-300 w-36 p-10px-25px rounded-md flex flex-col gap-2;
+    }
+    .hr-header {
+        @apply mb-5 mt-5 border-2 border-gray-50 w-4/5;
+    }
+    .local-profile {
+        @apply text-gray-400 pb-10 text-sm mt-1;
+    }
+}
