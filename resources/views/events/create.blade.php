@@ -1,22 +1,23 @@
 @extends('layouts.main')
 
-@section('title','Criar Perfil');
+@section('title','Criar Perfil')
 
 @section('content')
 
-    <div class="">
-        <h1>Crie seu Perfil</h1>
-        <form action="/events" method="post">
-            @csrf
-            <input type="text" name="title" id="" placeholder="title">
-            <input type="text" name="description" id="" placeholder="description">
-            <input type="text" name="city" id="" placeholder="city">
-            <select name="tatuagem" id="">
-                <option value="1">Sim</option>
-                <option value="0">Não</option>
-            </select>
-            <input type="submit" value="Publicar" >
-        </form>
-    </div>
-    
+    <main>
+        <section class="">
+            <div class="bg-red-500 h-profile w-full"></div>
+        </section>
+        <section>
+            <div class="flex bg-black justify-center items-center">
+                <div class="flex flex-col gap-5 h-96 w-1/5 bg-blue-500 p-5">
+                    <div class="bg-green-500 h-4/5 w-full"></div>
+                    <div class="bg-purple-500 h-4/5 w-full"></div>
+                </div>
+                <div class="h-96 w-2/4 bg-yellow-500 p-5">
+                    <div class="h-screen bg-pink"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 @endsection

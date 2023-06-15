@@ -1,5 +1,5 @@
 <footer>
-    <div class="relative bottom-0 w-full flex justify-between pr-32 pl-32 pt-2.5 pb-2.5 bg-white border-t-2 border-gray-50">
+    <div class="w-full flex justify-between pr-32 pl-32 pt-2.5 pb-2.5 bg-white border-t-2 border-gray-50">
         <div class="">
             <span class="font-light text-black">Todos os direitos reservados | 2020 - 2023</span>
         </div>

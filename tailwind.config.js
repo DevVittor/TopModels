@@ -20,6 +20,7 @@ module.exports = {
             },
             inset: {
                 topheader: "862px",
+                perfiltop: "96px",
             },
             textColor: {
                 rosa: "#EF375D",
@@ -46,11 +47,16 @@ module.exports = {
                 profileheader: "862px",
                 card: "382px",
                 cardsquare: "382px",
+                banner: "700px",
+                profile: "463px",
             },
             width: {
                 cardsquare: "650px",
                 ultrawidth: "1200px",
                 oitenta: "95%",
+            },
+            maxWidth: {
+                cardProfile: "80%",
             },
             borderWidth: {
                 tres: "3px",
