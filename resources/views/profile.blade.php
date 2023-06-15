@@ -3,73 +3,68 @@
 
 @section('content')
 
-<main>
-   <section>
-    <div class="flex flex-col justify-center items-center ">
-        <div class="flex justify-center p-5">
-            <div class="">
-                <img class="w-48 h-64 aspect-auto object-cover" src="https://images.pexels.com/photos/2467394/pexels-photo-2467394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-            </div>
-            <div class="w-3/6 p-5 flex flex-col justify-center bg-white gap-2.5">
-                <div class="flex items-start gap-5">
-                    <div class=" flex flex-col ">
-                        <div class="flex items-center gap-2.5">
-                            <h2>Amanda_nash</h2>
-                            <img class="h-6" src="/img/check.png" alt="">
-                        </div>
-                        <div class="">
-                            <span class="text-gray-400 text-sm">Amanda Nash</span>
-                        </div>
-                    </div>
-                    <div >
-                        <nav>
-                            <ul class="flex gap-2.5 items-center">
-                                <li class="p-3px-12px rounded-sm bg-gray-100 font-normal">LifeStyle</li>
-                                <li class="p-3px-12px rounded-sm bg-gray-100 font-normal">Music</li>
-                            </ul>
-                        </nav>
-                    </div>
+<main class="flex flex-col">
+
+    <section class="flex justify-center flex-col items-center">
+        <div class=" p-2.5 h-60 w-4/5 border-2 mt-5 rounded-lg shadow-card  border-gray-100 
+        sm:h-60 sm:4/5
+        md:h-60 md:4/5
+        lg:h-60 lg:w-4/5
+        xl:h-72 xl:w-3/5
+        2xl:h-72 2xl:w-3/5 ">
+            <div class="h-full flex items-center bg-white">
+                <div class="h-full w-64 bg-red-500">
+                    <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 </div>
-                <div class="flex gap-5 items-center">
-                    <div class="flex items-center gap-1.5">
-                        <h3>1,022</h3>
-                        <span>Posts</span>
+                <div class="flex flex-col w-full p-2.5 h-full">
+                    <div class="flex gap-2.5 items-center">
+                        <h2 class="font-semibold text-black text-lg">Vittor Fonseca Serra</h2>
+                        <img class="w-5" src="/img/check.png" alt="">
                     </div>
-                    <div class="flex items-center gap-1.5">
-                        <h3>1,022</h3>
-                        <span>Posts</span>
+                    <div class="flex items-center">
+                        <span class="text-gray-400 text-sm">Rio de Janeiro, RJ</span>
                     </div>
-                    <div class="flex items-center gap-1.5">
-                        <h3>1,022</h3>
-                        <span>Posts</span>
+                    <div class="flex items-cente pt-3.5">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam repudiandae architecto voluptatum modi tempora!</p>
                     </div>
-                </div>
-                <div class="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facilis officiis atque ea consequuntur id necessitatibus officia, totam iusto temporibus!</p>
-                </div>
-                <div class="">
-                    <ul class="flex items-center gap-2.5 flex-wrap">
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                        <li ><span class="p-3px-12px rounded-sm bg-blue-500 text-white">Home</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="p-5 bg-white">
-                <div class="flex gap-2.5 items-center">
-                    <i class="bi bi-envelope rounded-full flex justify-center items-center h-10 w-10 bg-gray-200"></i>
-                    <i class="bi bi-three-dots rounded-full flex justify-center items-center h-10 w-10 bg-gray-200"></i>
                 </div>
             </div>
         </div>
-    </div>
-   </section>
+    </section>
+    <section>
+        <div class="w-full">
+            <div class=" w-oitenta p-5 pb-10 mx-auto mb-10 gap-3 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5  space-y-3">
+                <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/11483969/pexels-photo-11483969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/7971616/pexels-photo-7971616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+        </div>
+    </section>
+
 </main>
     
 @endsection
+
+<!--<section>
+            <div class="w-full">
+                <div class=" w-oitenta p-5 pb-10 mx-auto mb-10 gap-3 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5  space-y-3">
+                    <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/11483969/pexels-photo-11483969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/11703092/pexels-photo-11703092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/7971616/pexels-photo-7971616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="https://images.pexels.com/photos/7752846/pexels-photo-7752846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+            </div>
+        </section>-->

@@ -18,6 +18,9 @@ module.exports = {
                 "3px-15px": "3px 15px",
                 "3px-12px": "3px 12px",
             },
+            inset: {
+                topheader: "862px",
+            },
             textColor: {
                 rosa: "#EF375D",
             },
@@ -41,9 +44,25 @@ module.exports = {
                 noventa: "85%",
                 dez: "15%",
                 profileheader: "862px",
+                card: "382px",
+                cardsquare: "382px",
+            },
+            width: {
+                cardsquare: "650px",
+                ultrawidth: "1200px",
+                oitenta: "95%",
             },
             borderWidth: {
                 tres: "3px",
+            },
+            gridTemplateColumns: {
+                templatecol: "repeat(auto-fill, minmax(200px, 1fr))",
+            },
+            gridAutoRows: {
+                dez: "10px",
+            },
+            margin: {
+                zeroauto: "0 auto",
             },
         },
     },
