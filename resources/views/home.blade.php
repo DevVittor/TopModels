@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <main>
+    <main class="font-inter">
         <section>
             <div class="flex min-h-full h-auto items-center p-10 justify-center ">
                 <div class="grid gap-2.5  grid-cols-7 bg-blue-500 ">

@@ -55,6 +55,9 @@ module.exports = {
                 ultrawidth: "1200px",
                 oitenta: "95%",
             },
+            fontFamily: {
+                inter: ["Inter"],
+            },
             maxWidth: {
                 cardProfile: "80%",
             },

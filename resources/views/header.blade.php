@@ -1,4 +1,4 @@
-<header class="sticky bg-white top-0">
+<header class="sticky bg-white top-0 z-50 font-inter">
     <div class="flex justify-between items-center h-24 p-10px-80px border-b-2 border-gray-100">
         <div class="flex items-center gap-10">
             <div class="">
