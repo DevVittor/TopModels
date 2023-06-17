@@ -33,4 +33,9 @@ class EventController extends Controller
 
         return redirect('/');
     }
+    public function show($id)
+    {
+        $profile = Event::findOrFail($id);
+        return view('events.profile', ['profile' => $profile]);
+    }
 }

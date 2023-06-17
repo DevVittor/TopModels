@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','Criar Perfil')
+@section('title','Perfil')
 
 @section('content')
 
@@ -13,7 +13,7 @@
                 <div class=" h-full  bg-white border-r-2 border-b-2 border-t-2 rounded-r-md rounded-t-md rounded-l-none p-5 w-2/5">
                     <div class="flex justify-between items-center">
                         <div class="flex items-center gap-2.5">
-                            <h2 class="text-2xl font-semibold">Jéssica Gomes</h2>
+                            <h2 class="text-2xl font-semibold">{{$profile->id}}</h2>
                             <img class="h-7 w-7" src="/img/check.png" alt="">
                         </div>
                         <div class="">

@@ -3,18 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-    .header {
-        @apply sticky top-0 h-screen w-52 bg-white sm:w-60  md:w-64 xl:w-72 2xl:w-80 z-50;
-    }
     .logo {
         @apply text-rosa font-bold uppercase text-3xl;
     }
     .icon-logo {
         @apply pr-1.5;
-    }
-    .container-header {
-        @apply flex flex-col border-r-2 h-screen pt-10 pb-10
-        pr-5 pl-5 border-gray-50 justify-between;
     }
     .img-profile {
         @apply h-72 pointer-events-none object-cover aspect-auto w-52 rounded-lg;
@@ -39,5 +32,87 @@
     }
     .local-profile {
         @apply text-gray-400 pb-10 text-sm mt-1;
+    }
+    /*Footer Style*/
+    .container-footer {
+        @apply w-full flex justify-center h-14 items-center pt-2.5 pb-2.5 gap-3 flex-col bg-white 
+        border-t-2 border-gray-100;
+    }
+    .container-footer-sm {
+        @apply sm:flex sm:justify-between sm:flex-row 
+        sm:pr-10 sm:pl-10;
+    }
+    .container-footer-md {
+        @apply md:flex md:justify-between md:flex-row 
+        md:pr-20 md:pl-20;
+    }
+    .container-footer-lg {
+        @apply lg:flex lg:justify-between lg:flex-row 
+        lg:pr-20 lg:pl-20;
+    }
+    .container-footer-xl {
+        @apply xl:flex xl:justify-between xl:flex-row 
+        xl:pr-40 xl:pl-40;
+    }
+    .container-footer-2xl {
+        @apply 2xl:flex 2xl:justify-between 2xl:flex-row 
+        2xl:pr-40 2xl:pl-40;
+    }
+    /*Header*/
+    .header {
+        @apply sticky top-0 z-50 font-inter;
+    }
+    .container-header {
+        @apply flex justify-center bg-white items-center flex-col gap-3 h-auto 
+        p-10px-80px border-b-2 border-gray-100;
+    }
+    .container-header-sm {
+        @apply sm:flex-col sm:justify-between;
+    }
+    .container-header-md {
+        @apply md:flex-col;
+    }
+    .container-header-lg {
+        @apply lg:flex-col;
+    }
+    .container-header-xl {
+        @apply xl:flex-row;
+    }
+    .container-header-2xl {
+        @apply 2xl:flex-row;
+    }
+    /*List Card Home*/
+    .container-card {
+        @apply flex min-h-full h-auto items-center p-2 justify-center;
+    }
+    .box-card {
+        @apply grid gap-2  grid-cols-2;
+    }
+    .box-card-sm {
+        @apply sm:grid-cols-3;
+    }
+    .box-card-md {
+        @apply md:grid-cols-4;
+    }
+    .box-card-lg {
+        @apply lg:grid-cols-8;
+    }
+    .box-card-2xl {
+        @apply 2xl:grid-cols-7;
+    }
+    .card {
+        @apply h-80 w-56 bg-black;
+    }
+    .card-sm {
+        @apply sm:h-80 sm:w-52;
+    }
+    .card-md {
+        @apply md:h-72 md:w-48;
+    }
+    .card-lg {
+        @apply lg:h-72 lg:w-44;
+    }
+    .card-2xl {
+        @apply 2xl:h-96 2xl:w-60;
     }
 }
