@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('title','Perfil')
+@section('title',$profile->title)
 
 @section('content')
 
-    <main class="font-inter"> 
+    <main class="font-inter "> 
         <section>
             <div class="flex justify-center h-profile  items-center flex-row p-5">
                 <div class=" h-full 1/5">

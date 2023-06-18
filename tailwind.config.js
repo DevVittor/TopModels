@@ -37,6 +37,7 @@ module.exports = {
                 pink: "#EF375D",
                 azul: "#428cd8",
                 cinza: "#e8e8e8",
+                cinza2: "#EDEDEF",
             },
             borderColor: {
                 rosa: "#EF375D",

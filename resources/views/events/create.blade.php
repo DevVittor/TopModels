@@ -4,95 +4,249 @@
 
 @section('content')
 
-    <main class="font-inter"> 
+    <main class="font-inter bg-cinza2"> 
         <section>
-            <div class="flex justify-center h-profile  items-center flex-row p-5">
-                <div class=" h-full 1/5">
-                    <img class="h-full w-full object-cover pointer-events-none" src="https://images.pexels.com/photos/4376407/pexels-photo-4376407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div class=" h-full  bg-white border-r-2 border-b-2 border-t-2 rounded-r-md rounded-t-md rounded-l-none p-5 w-2/5">
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2.5">
-                            <h2 class="text-2xl font-semibold">Jéssica Gomes</h2>
-                            <img class="h-7 w-7" src="/img/check.png" alt="">
-                        </div>
+            <div class="flex flex-col  justify-center items-center gap-8 h-auto w-full p-8">
+
+                <div class="h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8 hover:shadow-card hover:transition-all hover:delay-150">
                         <div class="">
-                            <button class="text-white bg-red-600 p-10px-25px rounded-md shadow-card font-semibold text-base"><i class="pr-2 fa-solid fa-triangle-exclamation"></i>Denunciar</button>
+                            <h1 class="font-semibold text-xl underline">Crie seu Perfil</h1>
                         </div>
-                    </div>
-                    <div class="mt-2.5">
-                        <nav>
-                            <ul class="flex items-center gap-2.5">
-                                <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-location-dot pr-2 text-red-600"></i>Rio de Janeiro</span></li>
-                                <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-venus pr-2"></i>Mulher</span></li>
-                                <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-cake-candles pr-2"></i>25 Anos</span></li>
-                                
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="mt-6">
-                        <p class="text-base font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet animi, distinctio saepe, quas reiciendis nulla magnam sunt, dolore voluptas corporis ut accusantium. Sed delectus impedit distinctio, qui cum veritatis provident aperiam quidem ullam voluptates exercitationem beatae dolor numquam suscipit. Voluptates recusandae, repellat tenetur praesentium sunt voluptatum in unde soluta impedit vitae deleniti debitis. Quod modi atque aperiam? Perspiciatis recusandae ad tempora, sequi, dolorem ullam, est voluptates eum nisi vero repellendus odio ab amet. Enim natus voluptas vitae, consequatur iste ipsam.</p>
-                    </div>
-                    <div class="flex items-center justify-between mt-8">
-                        <div class="">
-                            <nav>
-                                <ul class="flex items-center gap-2.5 text-2xl ">
-                                    <li><span class="cursor-pointer"><i class="fa-brands fa-square-facebook"></i></span></li>
-                                    <li><span class="cursor-pointer"><i class="fa-brands fa-square-twitter"></i></span></li>
-                                    <li><span class="cursor-pointer"><i class="fa-brands fa-square-instagram"></i></span></li>
-                                    <li><span class="cursor-pointer"><i class="fa-brands fa-telegram"></i></span></li>
-                                </ul>
-                            </nav>
+                        <div class="flex items-start justify-between gap-5">
+                            <div class="flex justify-center items-center flex-col gap-3">
+                                <div class="h-64 w-48 rounded-lg">
+                                    <img class="object-cover h-full w-full rounded-lg" class="" src="https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                </div> 
+                                <span>Foto em jpg até 2mb</span>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <h4 class="">Sobre Mim</h4>
+                                <textarea class="resize-none border-2 p-5 border-gray-200 max-h-52 outline-none text-black font-medium text-base rounded-lg" name="" id="" required cols="70" rows="10"></textarea>
+                            </div>
                         </div>
-                        <div class="">
-                            <a target="_blank" class="bg-green-500 pt-2.5 pb-2.5 pr-5 pl-5 text-white text-xl rounded-sm shadow-card" href="#"><i class="pr-2 fa-brands fa-square-whatsapp"></i>Entrar em Contato</a>
+
+                        <div class="flex justify-between items-center pt-10 w-full">
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Nome Completo</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div> 
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Preço/H</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Moedas Aceitas</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Formas de Pagamento</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            
                         </div>
-                    </div>
+                        <div class="flex justify-between items-center pt-5 w-full">
+                            
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Categoria</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">E-mail</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Celular/Whatsapp</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                            <div class="flex flex-col gap-3 w-1/5">
+                                <label for="">Nacionalidade</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                            </div>
+                        </div>
                 </div>
-            </div>
-        </section>
-        <section >
-            <div class="flex justify-center items-center">
-                <div class="p-3 grid grid-cols-6 gap-2.5 w-4/5">
-                    <div class="bg-pink p-3 rounded-md shadow-card gap-16 flex flex-col justify-between">
-                        <h2 class=" font-semibold text-white text-2xl">Ohos</h2>
-                        <h4 class=" font-normal text-white text-base">Castanhos</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class=" flex justify-center items-center">
-                <div class="p-3 grid grid-cols-6 gap-2.5 w-4/5">
-                    <div class="bg-blue-500 p-3 rounded-md shadow-card gap-16 flex flex-col justify-between">
-                        <h2 class=" font-semibold text-white text-2xl">Ohos</h2>
-                        <h4 class=" font-normal text-white text-base">Castanhos</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="flex justify-center items-center flex-col pt-10 gap-8">
-                <div class="">
-                    <h2 class="text-3xl text-black font-extrabold underline"><i class="fa-solid fa-camera-retro pr-2"></i>Galeria</h2>
-                </div>
-                <div class="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-3 columns-3 space-y-3">
-                    <img class="hover:border-4 border-4 border-transparent delay-150 transition-all hover:delay-200 hover:border-rosa rounded-md hover:cursor-pointer" src="https://images.pexels.com/photos/2737021/pexels-photo-2737021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div> 
-            </div>
-        </section>
-        <section>
-            <div class="flex justify-center items-center flex-col pb-10 pt-10">
-                <div class="flex items-center justify=center gap-3 mb-10">
+
+                <div class=" h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8">
                     <div class="">
-                        <img class="h-14" src="/img/local.png" alt="">
+                        <h2 class="font-semibold text-xl underline">Corpo</h2>
                     </div>
-                    <div class="flex justify-center items-center text-black flex-col">
-                        <h2 class="text-3xl font-extrabold underline">Local de Encontro</h2>
-                        <span class="mt-2 text-sm font-normal">Rua Brasilia de alburque - Tanque</span>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Etinia</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Estilo do Corpo</label>
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Altura</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Peso</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Deficiência</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Gênero</label>
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Sexualidade</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Data de nascimento</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Cicatriz</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Cor dos olhos</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Cor do cabelo</label>
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Estilo do cabelo</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
                     </div>
                 </div>
-                <iframe class="w-3/4 h-banner rounded-md shadow-card" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3318797001425!2d-43.36743762385366!3d-22.938001479233186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd854cf082cef%3A0x69de85aa6f716032!2sR.%20Paulo%20Moreira%20da%20Silva%2C%20290%20-%20Taquara%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022770-210!5e0!3m2!1spt-BR!2sbr!4v1686890258880!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class=" h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8">
+                    <div class="">
+                        <h2 class="font-semibold text-xl underline">Atributos</h2>
+                    </div>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Tatuagens</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Piercing</label>
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Ôculos</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Silicone</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Tamanho dos peitos</label><!--Vai ter todas as opções apenas no peito apenas na bunda peito e bunda -->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Estilo do peito</label><!--Gigante,Grande,Médio,Pequeno,Nenhum-->
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Tamanho da bunda</label><!--Empinados,Moles,Naturais,Nenhum-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Estilo da bunda</label><!--Gigante,Grande,Média,Normal,Pequena-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full gap-3">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Fumante</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Viagem</label><!--Disponível,Ausente,Depende-->
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Tirar Foto</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Gravar Vídeo</label>
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-white h-96 w-3/5 p-8 rounded-lg">
+                    <div class="flex justify-center hover:cursor-pointer items-center h-full w-full border-8 border-dashed border-gray-200 ">
+                        <h2 class="flex flex-col justify-center items-center gap-3 text-3xl font-extrabold text-gray-500"><i class="bi bi-cloud-arrow-up-fill text-blue-400"></i>Upload Vídeo</h2>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-white h-auto w-3/5 p-8 rounded-lg flex flex-col gap-8">
+                    <div class="">
+                        <h2 class="font-semibold text-xl underline">Horários de Atendimento</h2>
+                    </div>
+                    <div class="flex items-center justify-between h-full w-full bg-white">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Domingo</label><!--Vai ter todas as opções apenas no peito apenas na bunda peito e bunda -->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Segunda-Feira</label><!--Gigante,Grande,Médio,Pequeno,Nenhum-->
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Terça-Feira</label><!--Empinados,Moles,Naturais,Nenhum-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Quarta-Feira</label><!--Gigante,Grande,Média,Normal,Pequena-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between h-full w-full bg-white">
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Quinta-Feira</label><!--Vai ter todas as opções apenas no peito apenas na bunda peito e bunda -->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Sexta-Feira</label><!--Gigante,Grande,Médio,Pequeno,Nenhum-->
+                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Sábado</label><!--Empinados,Moles,Naturais,Nenhum-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                        <div class="flex flex-col w-1/5 gap-3">
+                            <label for="">Feriados</label><!--Gigante,Grande,Média,Normal,Pequena-->
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Serviços-->
+                <div class="bg-red-500 h-96 w-3/5 p-8 rounded-lg"></div>
+
+                <!--Local de Encontro-->
+                <div class="bg-red-500 h-96 w-3/5 p-8 rounded-lg"></div>
+
+                <!--Rede Social-->
+                <div class="bg-red-500 h-96 w-3/5 p-8 rounded-lg"></div>
+
             </div>
         </section>
     </main>
