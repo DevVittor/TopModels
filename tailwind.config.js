@@ -29,10 +29,6 @@ module.exports = {
                 rgba: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
                 card: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
             },
-            width: {
-                limite: "1819px",
-                noventacinco: "95%",
-            },
             backgroundColor: {
                 pink: "#EF375D",
                 azul: "#428cd8",
@@ -50,11 +46,16 @@ module.exports = {
                 cardsquare: "382px",
                 banner: "700px",
                 profile: "463px",
+                alturaCard: "309.94px",
             },
             width: {
+                limite: "1819px",
+                noventacinco: "95%",
+                larguraCard: "413.25px",
                 cardsquare: "650px",
                 ultrawidth: "1200px",
                 oitenta: "95%",
+                larguraCard: "413.25px",
             },
             fontFamily: {
                 inter: ["Inter"],
@@ -73,6 +74,9 @@ module.exports = {
             },
             margin: {
                 zeroauto: "0 auto",
+            },
+            backgroundImage: {
+                fundo: "url('https://images.pexels.com/photos/7642452/pexels-photo-7642452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
             },
         },
     },

@@ -83,10 +83,10 @@
     }
     /*List Card Home*/
     .container-card {
-        @apply flex min-h-full h-auto items-center p-2 justify-center;
+        @apply flex min-h-full h-auto w-full items-center justify-center;
     }
     .box-card {
-        @apply grid gap-2  grid-cols-2;
+        @apply grid gap-2  grid-cols-2 rounded-lg;
     }
     .box-card-sm {
         @apply sm:grid-cols-3;
@@ -98,10 +98,10 @@
         @apply lg:grid-cols-8;
     }
     .box-card-2xl {
-        @apply 2xl:grid-cols-7;
+        @apply 2xl:gap-9  2xl:grid-cols-4;
     }
     .card {
-        @apply h-80 w-56 bg-black;
+        @apply h-80 w-56 bg-fundo bg-cover rounded-lg p-5;
     }
     .card-sm {
         @apply sm:h-80 sm:w-52;
@@ -113,6 +113,6 @@
         @apply lg:h-72 lg:w-44;
     }
     .card-2xl {
-        @apply 2xl:h-96 2xl:w-60;
+        @apply 2xl:h-alturaCard 2xl:w-larguraCard;
     }
 }

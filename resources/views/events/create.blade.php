@@ -9,9 +9,14 @@
             <div class="flex flex-col  justify-center items-center gap-8 h-auto w-full p-8">
 
                 <div class="h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8 hover:shadow-card hover:transition-all hover:delay-150">
+                    <div class="flex items-center justify-between">
                         <div class="">
-                            <h1 class="font-semibold text-xl underline">Crie seu Perfil</h1>
+                            <h2 class="font-semibold text-xl hover:underline">Crie seu Perfil</h2>
                         </div>
+                        <div class="">
+                            <i class="bi bi-caret-up-fill text-2xl hover:cursor-pointer"></i>
+                        </div>
+                    </div>
                         <div class="flex items-start justify-between gap-5">
                             <div class="flex justify-center items-center flex-col gap-3">
                                 <div class="h-64 w-48 rounded-lg">
@@ -66,8 +71,13 @@
                 </div>
 
                 <div class=" h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8">
-                    <div class="">
-                        <h2 class="font-semibold text-xl underline">Corpo</h2>
+                    <div class="flex items-center justify-between">
+                        <div class="">
+                            <h2 class="font-semibold text-xl hover:underline">Corpo</h2>
+                        </div>
+                        <div class="">
+                            <i class="bi bi-caret-up-fill text-2xl hover:cursor-pointer"></i>
+                        </div>
                     </div>
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
@@ -126,8 +136,13 @@
                 </div>
 
                 <div class=" h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8">
-                    <div class="">
-                        <h2 class="font-semibold text-xl underline">Atributos</h2>
+                    <div class="flex items-center justify-between">
+                        <div class="">
+                            <h2 class="font-semibold text-xl hover:underline">Atributos</h2>
+                        </div>
+                        <div class="">
+                            <i class="bi bi-caret-up-fill text-2xl hover:cursor-pointer"></i>
+                        </div>
                     </div>
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
@@ -197,7 +212,14 @@
 
                 <div class="bg-white h-auto w-3/5 p-8 rounded-lg flex flex-col gap-8">
                     <div class="">
-                        <h2 class="font-semibold text-xl underline">Horários de Atendimento</h2>
+                        <div class="flex items-center justify-between">
+                            <div class="">
+                                <h2 class="font-semibold text-xl hover:underline">Horários de Atendimento</h2>
+                            </div>
+                            <div class="">
+                                <i class="bi bi-caret-up-fill text-2xl hover:cursor-pointer"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex items-center justify-between h-full w-full bg-white">
                         <div class="flex flex-col w-1/5 gap-3">

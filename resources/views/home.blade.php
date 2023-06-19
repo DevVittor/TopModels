@@ -12,25 +12,21 @@
                 </div>
             </div>
         </section>
+        <section></section>
         <section>
-            <div class="container-card">
-                <div class="box-card
-                box-card-sm
-                box-card-md
-                box-card-lg
-                box-card-xl
-                box-card-2xl">
-                    @foreach($profile as $items)
-                    <div class="card
-                    card-sm 
-                    card-md 
-                    card-lg 
-                    card-2xl">
-                        <h2 class="text-white">{{$items->title}}</h2>
-                        <a href="/events/{{$items->id}}">Acessar</a>
+            <div class=" w-full bg-red-600 p-3 columns-1 space-y-3 mx-auto gap-3  
+            sm:columns-2
+            md:columns-3
+            lg:columns-4
+            2xl:columns-5">
+                @foreach($profile as $items)
+                    <div class="flex flex-col justify-end items-center rounded-lg">
+                        <a class="rounded-lg cursor-pointer" href="/events/{{$items->id}}">
+                            <img class="rounded-lg" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        </a>
+                        <h2 class="absolute backdrop-blur-lg mb-2 sm:w-52 md:w-48 w-4/5 text-center p-3 text-lg font-semibold rounded-sm">Larissa Gomes</h2>
                     </div>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
         </section>
     </main>
