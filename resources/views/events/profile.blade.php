@@ -1,20 +1,24 @@
 @extends('layouts.main')
 
-@section('title',$profile->title)
+@section('title',$profile->nome)
 
 @section('content')
 
-    <main class="font-inter "> 
+    <main class="font-inter ">
         <section>
             <div class="flex justify-center h-profile  items-center flex-row p-5">
                 <div class=" h-full 1/5">
-                    <img class="h-full w-full object-cover pointer-events-none" src="https://images.pexels.com/photos/4376407/pexels-photo-4376407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img class="h-full w-full object-cover pointer-events-none" src="/img/profileImg/{{$profile->imageProfile}}" alt="">
                 </div>
                 <div class=" h-full  bg-white border-r-2 border-b-2 border-t-2 rounded-r-md rounded-t-md rounded-l-none p-5 w-2/5">
                     <div class="flex justify-between items-center">
                         <div class="flex items-center gap-2.5">
-                            <h2 class="text-2xl font-semibold">{{$profile->id}}</h2>
+                            <h2 class="text-2xl font-semibold">{{$profile->nome}}</h2>
+                            @if($profile->verificada == false)
+                            <h4 class="font-light text-base ">(Não Verificada)</h4>
+                            @else
                             <img class="h-7 w-7" src="/img/check.png" alt="">
+                            @endif
                         </div>
                         <div class="">
                             <button class="text-white bg-red-600 p-10px-25px rounded-md shadow-card font-semibold text-base"><i class="pr-2 fa-solid fa-triangle-exclamation"></i>Denunciar</button>
@@ -23,7 +27,7 @@
                     <div class="mt-2.5">
                         <nav>
                             <ul class="flex items-center gap-2.5">
-                                <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-location-dot pr-2 text-red-600"></i>Rio de Janeiro</span></li>
+                                <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-location-dot pr-2 text-red-600"></i>{{$profile->city}}</span></li>
                                 <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-venus pr-2"></i>Mulher</span></li>
                                 <li><span class="p-3px-12px border-2 border-gray-100 text-black font-normal rounded-sm"><i class="fa-solid fa-cake-candles pr-2"></i>25 Anos</span></li>
                                 
@@ -31,7 +35,7 @@
                         </nav>
                     </div>
                     <div class="mt-6">
-                        <p class="text-base font-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet animi, distinctio saepe, quas reiciendis nulla magnam sunt, dolore voluptas corporis ut accusantium. Sed delectus impedit distinctio, qui cum veritatis provident aperiam quidem ullam voluptates exercitationem beatae dolor numquam suscipit. Voluptates recusandae, repellat tenetur praesentium sunt voluptatum in unde soluta impedit vitae deleniti debitis. Quod modi atque aperiam? Perspiciatis recusandae ad tempora, sequi, dolorem ullam, est voluptates eum nisi vero repellendus odio ab amet. Enim natus voluptas vitae, consequatur iste ipsam.</p>
+                        <p class="text-base font-light">{{$profile->description}}</p>
                     </div>
                     <div class="flex items-center justify-between mt-8">
                         <div class="">
@@ -95,5 +99,6 @@
                 <iframe class="w-3/4 h-banner rounded-md shadow-card" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3318797001425!2d-43.36743762385366!3d-22.938001479233186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd854cf082cef%3A0x69de85aa6f716032!2sR.%20Paulo%20Moreira%20da%20Silva%2C%20290%20-%20Taquara%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022770-210!5e0!3m2!1spt-BR!2sbr!4v1686890258880!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+    
     </main>
 @endsection

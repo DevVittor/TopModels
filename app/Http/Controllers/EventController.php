@@ -24,12 +24,27 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $profile = new Event;
-        $profile->title = $request->title;
+        $profile->nome = $request->nome;
         $profile->description = $request->description;
         $profile->city = $request->city;
         $profile->tatuagem = $request->tatuagem;
 
+        //Image Upload
+        if ($request->hasFile('imageProfile') && $request->file('imageProfile')->isValid()) {
+
+            $requestImage = $request->file('imageProfile');
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/profileImg'), $imageName);
+
+            $profile->imageProfile = $imageName;
+        }
+
         $profile->save();
+
 
         return redirect('/');
     }

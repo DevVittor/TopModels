@@ -34,6 +34,8 @@ module.exports = {
                 azul: "#428cd8",
                 cinza: "#e8e8e8",
                 cinza2: "#EDEDEF",
+                fundoBlack: "#121212",
+                headerBlack: "#181818",
             },
             borderColor: {
                 rosa: "#EF375D",

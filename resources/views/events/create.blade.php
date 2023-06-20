@@ -6,6 +6,8 @@
 
     <main class="font-inter bg-cinza2"> 
         <section>
+            <form action="/events" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="flex flex-col  justify-center items-center gap-8 h-auto w-full p-8">
 
                 <div class="h-auto w-3/5 p-8 bg-white rounded-lg flex flex-col gap-8 hover:shadow-card hover:transition-all hover:delay-150">
@@ -17,23 +19,25 @@
                             <i class="bi bi-caret-up-fill text-2xl hover:cursor-pointer"></i>
                         </div>
                     </div>
-                        <div class="flex items-start justify-between gap-5">
-                            <div class="flex justify-center items-center flex-col gap-3">
-                                <div class="h-64 w-48 rounded-lg">
-                                    <img class="object-cover h-full w-full rounded-lg" class="" src="https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="flex items-center w-full justify-between flex-col gap-5">
+                            <div class="flex justify-center items-center h-96 w-3/5 flex-col gap-3">
+                                <div class="flex justify-center items-center  h-full w-full">
+                                    <label class="border-4 border-gray-200 border-dashed flex justify-center items-center text-2xl font-extrabold hover:border-blue-500 delay-150 transition-all hover:cursor-pointer h-full w-full " for="inputImage"><span>Carregar Imagem</span></label>
+                                    <input class="hidden" type="file" accept="image/jpg,image/jpeg,image/png" name="imageProfile" id="inputImage">
+                                    <img class="h-full w-full object-contain hidden" src="" alt="">
                                 </div> 
                                 <span>Foto em jpg até 2mb</span>
                             </div>
-                            <div class="flex flex-col gap-3">
+                            <div class="flex flex-col w-full gap-3">
                                 <h4 class="">Sobre Mim</h4>
-                                <textarea class="resize-none border-2 p-5 border-gray-200 max-h-52 outline-none text-black font-medium text-base rounded-lg" name="" id="" required cols="70" rows="10"></textarea>
+                                <textarea class="resize-none border-2 p-5 border-gray-200 max-h-72 outline-none text-black font-medium text-base rounded-lg" name="description" id="" cols="70" rows="10"></textarea>
                             </div>
                         </div>
 
                         <div class="flex justify-between items-center pt-10 w-full">
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Nome Completo</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="nome" id=""> 
                             </div> 
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Preço/H</label>
@@ -41,11 +45,28 @@
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Moedas Aceitas</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                                <select name=" moedas" id="">
+                                    <option value="" selected disabled>Escolha</option>
+                                    <option value="Real">Real</option>
+                                    <option value="Dolar">Dolar</option>
+                                    <option value="Euro">Euro</option>
+                                    <option value="Libra">Libra</option>
+                                    <option value="Yene">Yene</option>
+                                    <option value="Bitcoin">Bitcoin</option>
+                                    <option value="Peso">Peso</option>
+                                </select> 
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Formas de Pagamento</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                                <select name=" formas_pagamento" id="">
+                                    <option value="" selected disabled>Escolha</option>
+                                    <option value="Pix">Pix</option>
+                                    <option value="Dinheiro">Dinheiro</option>
+                                    <option value="Credito">Credito</option>
+                                    <option value="Débito">Débito</option>
+                                    <option value="Transf_bancaria">Transferência Bancária</option>
+                                    <option value="TED">TED</option>
+                                </select>
                             </div>
                             
                         </div>
@@ -53,7 +74,14 @@
                             
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Categoria</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                                <select name="Categoria" id="">
+                                    <option value="" selected disabled>Escolha</option>
+                                    <option value="Heterosexual">Acompanhante</option>
+                                    <option value="Heterosexual">Modelos</option>
+                                    <option value="Heterosexual">Massagista Sexual</option>
+                                    <option value="Heterosexual">Cam Girl</option>
+                                    <option value="Heterosexual">Packs</option>
+                                </select>
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">E-mail</label>
@@ -64,8 +92,8 @@
                                 <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
-                                <label for="">Nacionalidade</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id=""> 
+                                <label for="">Estado/Cidade</label>
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="city" id=""> 
                             </div>
                         </div>
                 </div>
@@ -82,11 +110,27 @@
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Etinia</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="Etinia" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Estilo do Corpo</label>
-                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="estilo_corpo" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="">Magra</option>
+                                <option value="">Normal</option>
+                                <option value="">Corpão</option>
+                                <option value="">Sarada</option>
+                                <option value="">Musculosa</option>
+                                <option value="">Gordinha</option>
+                                <option value="">Gorda</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Altura</label>
@@ -100,15 +144,31 @@
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Deficiência</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="Deficiencia" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="Heterosexual">Nenhuma</option>
+                                <option value="Heterosexual">Visual</option>
+                                <option value="Heterosexual">Física</option>
+                                <option value="Heterosexual">Mental</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Gênero</label>
-                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="Genero" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="Heterosexual">Mulher</option>
+                                <option value="Heterosexual">Homem</option>
+                                <option value="Heterosexual">Transgênero</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Sexualidade</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="sexualidade" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="Heterosexual">Hétero</option>
+                                <option value="Heterosexual">Homosexual</option>
+                                <option value="Heterosexual">Bissexual</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Data de nascimento</label>
@@ -118,19 +178,67 @@
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Cicatriz</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="cicatriz" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="0">Não</option>
+                                <option value="1">Sim</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Cor dos olhos</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="cor_olhos" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="Heterosexual">Preto</option>
+                                <option value="Heterosexual">Castanho</option>
+                                <option value="Heterosexual">Verde</option>
+                                <option value="Heterosexual">Azul</option>
+                                <option value="Heterosexual">Azul-esverdeado</option>
+                                <option value="Avelã">Avelã (castanhos-esverdeados)</option>
+                                <option value="Cinza">Cinza</option>
+                                <option value="Heterocromia">Heterocromia</option>
+                                <option value="Âmbar">Âmbar</option>
+                                <option value="">Vermelho (albinismo)</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Cor do cabelo</label>
-                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="cor_cabelo" id="">
+                                <option value=""selected disabled>Escolha</option>
+                                <option value="">Castanho</option>
+                                <option value="">Preto</option>
+                                <option value="">Louro</option>
+                                <option value="">Branco</option>
+                                <option value="">Crizalho</option>
+                                <option value="">Vermelho</option>
+                                <option value="">Outros</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Estilo do cabelo</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="estilo_cabelo" id="">
+                                <option value=""selected disabled>Escolha</option>
+                                <option value="">liso</option>
+                                <option value="">ondulado</option>
+                                <option value="">cacheado</option>
+                                <option value="">crespo</option>
+                                <option value="">afro</option>
+                                <option value="">curto</option>
+                                <option value="">médio</option>
+                                <option value="">longo</option>
+                                <option value="">repicado</option>
+                                <option value="">com camadas</option>
+                                <option value="">com franja</option>
+                                <option value="">com mechas</option>
+                                <option value="">colorido</option>
+                                <option value="">trançado</option>
+                                <option value="">Careca</option>
+                                <option value="">com coque</option>
+                                <option value="">com rabo de cavalo</option>
+                                <option value="">com topete</option>
+                                <option value="">com dreadlocks</option>
+                                <option value="">com tranças africanas</option>
+                                <option value="">com beach waves (ondas de praia)</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -147,19 +255,38 @@
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Tatuagens</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="tatuagem" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
+                            
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Piercing</label>
-                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="piercing" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Ôculos</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="Ôculos" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Silicone</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="piercing" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="">Não Tenho</option>
+                                <option value="">Peito</option>
+                                <option value="">Bunda</option>
+                                <option value="">Peito e Bunda</option>
+                            </select>
                         </div>
                     </div>
                     <div class="flex justify-between items-center w-full gap-3">
@@ -183,19 +310,35 @@
                     <div class="flex justify-between items-center w-full gap-3">
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Fumante</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="fumante" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Viagem</label><!--Disponível,Ausente,Depende-->
-                            <input class="w-auto rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="viagem" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Tirar Foto</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="tirar_foto" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Gravar Vídeo</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <select name="gravar_video" id="">
+                                <option value="" selected disabled>Escolha</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -269,7 +412,24 @@
                 <!--Rede Social-->
                 <div class="bg-red-500 h-96 w-3/5 p-8 rounded-lg"></div>
 
+                <div class="">
+                    <input class="bg-blue-500 text-white p-3px-12px rounded-sm text-lg font-semibold hover:cursor-pointer" type="submit" value="Publicar Perfil">
+                </div>
+
             </div>
         </section>
+    </form>
     </main>
+    <script>
+        let inputImg = document.getElementById('inputImage');
+        inputImg.addEventListener("change",(e,limite = 2048)=>{
+            let size = inputImg.files[0].size;
+            if(size < limite ){
+                alert("Upload Completo!");
+            }else{
+                alert("Só é permitido imagem com até 2Mb de tamanho");
+            };
+            e.preventDefault();
+        });
+    </script>
 @endsection

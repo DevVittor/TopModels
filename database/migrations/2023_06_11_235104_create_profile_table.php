@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('nome');
             $table->string('description', 255);
             $table->string('city');
+            $table->boolean('verificada')->default(0);
             $table->boolean('tatuagem');
             $table->timestamps();
         });

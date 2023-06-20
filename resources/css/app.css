@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    body {
+        @apply bg-fundoBlack;
+    }
     .logo {
         @apply text-rosa font-bold uppercase text-3xl;
     }
@@ -35,8 +38,7 @@
     }
     /*Footer Style*/
     .container-footer {
-        @apply w-full flex justify-center h-14 items-center pt-2.5 pb-2.5 gap-3 flex-col bg-white 
-        border-t-2 border-gray-100;
+        @apply w-full flex justify-center h-40 items-center pt-2.5 pb-2.5 gap-3 flex-col bg-headerBlack;
     }
     .container-footer-sm {
         @apply sm:flex sm:justify-between sm:flex-row 
@@ -63,23 +65,23 @@
         @apply sticky top-0 z-50 font-inter;
     }
     .container-header {
-        @apply flex justify-center bg-white items-center flex-col gap-3 h-auto 
-        p-10px-80px border-b-2 border-gray-100;
+        @apply flex justify-center bg-headerBlack items-center flex-col gap-3 h-auto 
+        p-10px-80px;
     }
     .container-header-sm {
-        @apply sm:flex-col sm:justify-between;
+        @apply sm:flex-col;
     }
     .container-header-md {
         @apply md:flex-col;
     }
     .container-header-lg {
-        @apply lg:flex-col;
+        @apply lg:flex-row lg:justify-between lg:h-24;
     }
     .container-header-xl {
-        @apply xl:flex-row;
+        @apply xl:flex-row xl:justify-between xl:h-24;
     }
     .container-header-2xl {
-        @apply 2xl:flex-row;
+        @apply 2xl:flex-row 2xl:justify-between 2xl:h-24;
     }
     /*List Card Home*/
     .container-card {
