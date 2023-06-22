@@ -4,29 +4,60 @@
 @section('content')
 
     <main class="font-inter bg-fundoBlack">
-        <section>
-            <div class="h-96 bg-blue-500 flex justify-center items-center">
-                <div class="">
-                    <h2 class="font-semibold text-3xl pb-2">Busque</h2>
-                    <input class="outline-none rounded-sm p-2.5" type="search" name="" id="">
+        <section class="grid grid-cols-1 w-full">
+            <div class="flex justify-center items-center w-full p-5">
+                <div class="w-full bg-white h-64 rounded-br-3xl"></div>
+            </div>
+        </section>
+        <section class="flex justify-center items-center gap-5 p-5">
+            <div class="grid grid-cols-5 gap-3">
+                <div class="bg-white h-20 w-20 rounded-lg"></div>
+                <div class="bg-white h-20 w-20 rounded-lg"></div>
+                <div class="bg-white h-20 w-20 rounded-lg"></div>
+                <div class="bg-white h-20 w-20 rounded-lg"></div>
+                <div class="bg-white h-20 w-20 rounded-lg"></div>
+            </div>
+        </section>
+        <section class="grid grid-cols-1">
+            <div class="h-auto w-full flex items-start p-5 gap-5">
+                <div class="h-96 w-full bg-white rounded-lg"></div>
+                <div class="flex flex-col gap-3 h-96 w-full ">
+                    <div class="h-2/4 bg-white rounded-lg"></div>
+                    <div class="h-2/4 bg-white rounded-lg"></div>
                 </div>
             </div>
         </section>
-        <section></section>
         <section>
-            <div class=" w-full p-3 columns-1 space-y-3 mx-auto gap-3  
-            sm:columns-2
-            md:columns-3
-            lg:columns-4
-            2xl:columns-5">
-                @foreach($profile as $items)
-                    <div class="flex flex-col justify-end items-center rounded-lg">
-                        <a class="rounded-lg cursor-pointer" href="/events/{{$items->id}}">
-                            <img class="rounded-lg" src="img/profileImg/{{$items->imageProfile}}" alt="">
-                        </a>
-                        <h2 class="absolute backdrop-blur-lg mb-2 w-auto text-center p-3 text-lg text-white font-semibold rounded-sm">{{$items->nome}}</h2>
-                    </div>
-                @endforeach
+            <div class="flex justify-center items-center  w-full p-5">
+                <div class="flex justify-center w-full h-96 gap-3 items-center flex-col">
+                    <div class="h-2/4 w-full bg-white rounded-lg"></div>
+                    <div class="h-2/4 w-full bg-white rounded-lg"></div>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-1">
+            <div class="h-auto w-full flex items-start p-5 gap-5">
+                <div class="flex flex-col gap-3 h-96 w-full ">
+                    <div class="h-2/4 bg-white rounded-lg"></div>
+                    <div class="h-2/4 bg-white rounded-lg"></div>
+                </div>
+                <div class="h-96 w-full bg-white rounded-lg"></div>
+            </div>
+        </section>
+        <section>
+            <div class="flex justify-center items-center p-5 ">
+                <div class="w-full bg-white h-48 rounded-lg"></div>
+            </div>
+        </section>
+        <section>
+            <div class="h-auto w-full flex justify-center p-5 gap-5">
+                <div class=" h-96 w-full bg-white rounded-lg"></div>
+                <div class="h-96 w-full bg-white rounded-lg"></div>
+            </div>
+        </section>
+        <section class="p-5">
+            <div class="bg-white rounded-lg h-32 w-full flex justify-center items-center">
+                <div class="bg-blue-500 h-12 w-3/4"></div>
             </div>
         </section>
     </main>

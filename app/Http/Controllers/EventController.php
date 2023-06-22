@@ -10,8 +10,19 @@ class EventController extends Controller
 {
     public function index()
     {
-        $profile = Event::all();
-        return view('home', ['profile' => $profile]);
+        return view('home');
+    }
+    public function acompanhantes()
+    {
+        $search = request('search');
+        if ($search) {
+            $profile = Event::where([
+                ['nome', 'like', '%' . $search . '%']
+            ])->get();
+        } else {
+            $profile = Event::all();
+        }
+        return view('acompanhantes', ['profile' => $profile, 'search' => $search]);
     }
     public function profile()
     {
@@ -46,7 +57,7 @@ class EventController extends Controller
         $profile->save();
 
 
-        return redirect('/');
+        return redirect('/acompanhantes');
     }
     public function show($id)
     {

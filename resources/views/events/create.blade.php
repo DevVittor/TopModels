@@ -58,7 +58,7 @@
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Formas de Pagamento</label>
-                                <select name=" formas_pagamento" id="">
+                                <select name="formas_pagamento" id="">
                                     <option value="" selected disabled>Escolha</option>
                                     <option value="Pix">Pix</option>
                                     <option value="Dinheiro">Dinheiro</option>
@@ -74,7 +74,7 @@
                             
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Categoria</label>
-                                <select name="Categoria" id="">
+                                <select name="categoria" id="">
                                     <option value="" selected disabled>Escolha</option>
                                     <option value="Heterosexual">Acompanhante</option>
                                     <option value="Heterosexual">Modelos</option>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="flex flex-col w-1/5 gap-3">
                             <label for="">Data de nascimento</label>
-                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="" id="">
+                            <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="date" name="" id="">
                         </div>
                     </div>
                     <div class="flex justify-between items-center w-full gap-3">
@@ -424,7 +424,7 @@
         let inputImg = document.getElementById('inputImage');
         inputImg.addEventListener("change",(e,limite = 2048)=>{
             let size = inputImg.files[0].size;
-            if(size < limite ){
+            if(size > limite ){
                 alert("Upload Completo!");
             }else{
                 alert("Só é permitido imagem com até 2Mb de tamanho");
