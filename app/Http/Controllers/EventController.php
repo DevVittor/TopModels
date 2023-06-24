@@ -37,7 +37,7 @@ class EventController extends Controller
         $profile = new Event;
         $profile->nome = $request->nome;
         $profile->description = $request->description;
-        $profile->city = $request->city;
+        $profile->Estado = $request->Estado;
         $profile->tatuagem = $request->tatuagem;
 
         //Image Upload
@@ -58,6 +58,10 @@ class EventController extends Controller
 
 
         return redirect('/acompanhantes');
+    }
+    public function planos()
+    {
+        return view('/planos');
     }
     public function show($id)
     {

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <main class="font-inter bg-cinza2"> 
+    <main class="font-inter bg-gray"> 
         <section>
             <form action="/events" method="post" enctype="multipart/form-data">
             @csrf
@@ -37,7 +37,7 @@
                         <div class="flex justify-between items-center pt-10 w-full">
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Nome Completo</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="nome" id=""> 
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="nome" id="" minlength="1" maxlength="25"> 
                             </div> 
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Preço/H</label>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="flex flex-col gap-3 w-1/5">
                                 <label for="">Estado/Cidade</label>
-                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="city" id=""> 
+                                <input class="rounded-full pl-3.5 pr-3.5 pt-1.5 border-2 focus:border-gray-400 focus:outline-2 border-gray-100 pb-1.5 outline-none" type="text" name="Estado" id=""> 
                             </div>
                         </div>
                 </div>
@@ -413,7 +413,7 @@
                 <div class="bg-red-500 h-96 w-3/5 p-8 rounded-lg"></div>
 
                 <div class="">
-                    <input class="bg-blue-500 text-white p-3px-12px rounded-sm text-lg font-semibold hover:cursor-pointer" type="submit" value="Publicar Perfil">
+                    <input class="bg-blue-500 text-white pt-3 pb-3 pr-5 pl-5 rounded-sm text-lg font-semibold hover:cursor-pointer" type="submit" value="Publicar Perfil">
                 </div>
 
             </div>
@@ -421,15 +421,28 @@
     </form>
     </main>
     <script>
-        let inputImg = document.getElementById('inputImage');
-        inputImg.addEventListener("change",(e,limite = 2048)=>{
-            let size = inputImg.files[0].size;
-            if(size > limite ){
-                alert("Upload Completo!");
-            }else{
-                alert("Só é permitido imagem com até 2Mb de tamanho");
-            };
-            e.preventDefault();
-        });
+    let inputImg = document.getElementById('inputImage');
+    inputImg.addEventListener("change", (e, limite = 2048) => {
+    let file = inputImg.files[0];
+    if (file) {
+        let reader = new FileReader();
+        reader.onload = function (event) {
+        let image = new Image();
+        image.src = event.target.result;
+        image.onload = function () {
+            let altura = this.height;
+            let largura = this.width;
+            if (file.size > limite && altura > largura) {
+            alert(`Upload Completo Altura: ${altura} e Largura: ${largura}`);
+            } else {
+            alert("Só é permitido imagem com até 2Mb de tamanho e imagens na vertical");
+            }
+        };
+        };
+        reader.readAsDataURL(file);
+    }
+    e.preventDefault();
+    });
+
     </script>
 @endsection

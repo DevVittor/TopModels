@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <main class="font-inter ">
+    <!--<main class="font-inter ">
         <section>
             <div class="flex justify-center h-profile  items-center flex-row p-5">
                 <div class=" h-full 1/5">
@@ -100,5 +100,44 @@
             </div>
         </section>
     
+    </main>-->
+
+    <main class="">
+        <section class="">
+            <div class="flex items-center h-alturamax">
+                <div class="flex justify-center items-center w-56 h-full">
+                    <nav>
+                        <ul class="flex justify-center items-center flex-col gap-5 text-white font-semibold text-lg">
+                            <li><a href="#">Perfil</a></li>
+                            <li><a href="#">Fotos</a></li>
+                            <li><a href="#">Vídeos</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Corpo</a></li>
+                            <li><a href="#">Atendimento</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex w-full h-full">
+                    <div class="flex justify-center items-center p-5 h-full w-1/3">
+                        <img class="h-full w-full object-cover rounded-md" src="/img/profileImg/{{$profile->imageProfile}}" alt="">
+                    </div>
+                    <div class="p-5 flex flex-col w-full gap-3">
+                        <h2 class="text-white text-4xl font-bold">{{$profile->nome}}</h2>
+                        <h4 class="text-white text-base font-light"><i class="bi bi-geo-alt-fill pr-2 text-red-600"></i>{{$profile->Estado}}</h4>
+                        <p class="text-white text-base font-normal mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, architecto sapiente aperiam consequatur cumque maiores atque? Ipsam adipisci velit culpa, ex totam libero, maxime enim, ea dolores omnis impedit! Repellendus optio culpa non, commodi odit nulla vero dolor, quaerat, voluptas quidem architecto dignissimos voluptatibus nemo? Ratione magni atque impedit, quia repellendus explicabo voluptates recusandae obcaecati dolorum molestiae ducimus quam dicta! Quidem magnam ex enim laborum deserunt aperiam quis cum ipsa harum qui vitae mollitia expedita, nihil illo? Quasi eveniet laudantium pariatur sequi debitis rem aspernatur neque nulla error sit explicabo illo ipsam similique enim quaerat laborum, alias, id dolorem iusto repellat eligendi corporis. Fuga quas dolor sapiente enim nobis mollitia inventore iure, temporibus harum dolore debitis delectus hic. Ad et similique unde, facere, quos quidem eos placeat praesentium, minima distinctio nisi voluptatum deserunt commodi! Explicabo unde perspiciatis blanditiis eveniet obcaecati atque doloremque voluptatem inventore quas maiores reprehenderit consectetur at, provident aspernatur soluta. Perferendis inventore esse saepe est optio quod quisquam, magni autem earum doloribus ad possimus aliquam odit amet? Quo culpa nam ut accusamus, unde neque ad modi earum perspiciatis blanditiis, illum similique? Laborum quis voluptatem est error dicta velit sed sint exercitationem unde quia, atque dignissimos itaque necessitatibus distinctio quod culpa, perferendis in hic soluta, assumenda corrupti? Minus beatae eligendi maxime accusamus tenetur excepturi placeat optio expedita, quae voluptates nihil suscipit voluptas illo quam, veritatis autem recusandae commodi sint. Qui omnis alias distinctio molestiae consectetur porro ullam provident quos impedit. Ad aliquam ipsam exercitationem quia! At assumenda cumque perspiciatis atque est aperiam animi soluta quia ullam corporis doloremque rem esse saepe amet asperiores quos accusamus minus, molestias consequatur ipsam, mollitia sequi non dignissimos debitis! Dolorum delectus neque consequatur tempora inventore harum excepturi laboriosam nostrum sit, expedita ipsam, architecto sequi, doloribus repudiandae et ut? Fuga accusamus obcaecati optio nisi at?</p>
+                        <div class="mt-10">
+                            <nav>
+                                <ul class="flex items-center gap-3 text-2xl text-white">
+                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
 @endsection

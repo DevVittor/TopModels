@@ -5,3 +5,80 @@
 [x-cloak] {
     display: none;
 }
+@layer components {
+    body {
+        @apply bg-black;
+    }
+    /*Scrollbar*/
+    body::-webkit-scrollbar {
+        @apply w-4;
+    }
+
+    body::-webkit-scrollbar-track {
+        @apply bg-headerBlack;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        @apply bg-white;
+    }
+    /*Header*/
+    .header {
+        @apply sticky top-0 z-50;
+    }
+    .container-header {
+        @apply flex items-center justify-center flex-col gap-3 pt-5 pb-5 bg-headerBlack
+        lg:flex-row lg:justify-between lg:pr-10 lg:pl-10 lg:h-28
+        xl:flex-row xl:pr-10 xl:pl-10 xl:h-28
+        2xl:flex-row 2xl:pr-10 2xl:pl-10 2xl:h-28;
+    }
+    /*Página Inicial*/
+    .grid-banner {
+        @apply grid grid-cols-1 w-full;
+    }
+    .container-banner {
+        @apply flex justify-center items-center w-full pb-5;
+    }
+    .box-banner {
+        @apply w-full bg-white h-64
+        sm:h-80
+        md:h-96
+        lg:h-bannerlg
+        xl:h-bannerlg
+        2xl:h-bannerxl;
+    }
+    /*Parceiros*/
+    .container-parceiros {
+        @apply flex justify-center items-center flex-wrap gap-5 pt-5 pb-5 pr-3.5 pl-3.5;
+    }
+    .card-parceiros {
+        @apply bg-white h-20 w-20
+        sm:h-24 sm:w-24
+        md:h-28 md:w-28
+        lg:h-36 lg:w-36
+        xl:h-40 xl:w-40
+        2xl:h-44 2xl:w-44;
+    }
+    /*Sobre*/
+    .section-sobre {
+        @apply w-full flex justify-center items-center;
+    }
+    .container-sobre {
+        @apply h-auto flex justify-center items-center w-full p-5 gap-5;
+    }
+    .box-img-sobre {
+        @apply h-96 bg-white w-full
+        sm:h-bannerlg sm:w-full
+        md:h-altura550px md:w-2/3
+        lg:w-2/4
+        xl:w-2/6 
+        2xl:w-1/4;
+    }  
+    .box-text-sobre {
+        @apply flex flex-col 2xl:w-2/4 gap-3 h-96 w-full
+        sm:h-bannerlg
+        md:h-altura550px;
+    }
+    .card-sobre {
+        @apply h-2/4 bg-white;
+    }
+}

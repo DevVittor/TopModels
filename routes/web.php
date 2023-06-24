@@ -9,9 +9,13 @@ Route::get('/acompanhantes', [EventController::class, 'acompanhantes']);
 Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/events/{id}', [EventController::class, 'show']);
 Route::post('/events', [EventController::class, 'store']);
+Route::get('/planos', [EventController::class, 'planos']);
+
+
 Route::fallback(function () {
     return view('error404');
 });
+
 
 Route::middleware([
     'auth:sanctum',
