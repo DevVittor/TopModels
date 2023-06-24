@@ -72,7 +72,7 @@
         lg:w-2/4
         xl:w-2/6 
         2xl:w-1/4;
-    }  
+    }
     .box-text-sobre {
         @apply flex flex-col 2xl:w-2/4 gap-3 h-96 w-full
         sm:h-bannerlg
@@ -80,5 +80,12 @@
     }
     .card-sobre {
         @apply h-2/4 bg-white;
+    }
+    /*Header*/
+    footer {
+        @apply border-t-2 border-gray-500;
+    }
+    .container-footer {
+        @apply h-footeraltura flex  justify-between items-center pr-10 pl-10;
     }
 }

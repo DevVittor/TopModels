@@ -15,6 +15,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                inter: ["'Inter', sans-serif"],
             },
             textColor: {
                 rosa: "#FF2171",
@@ -30,7 +31,8 @@ export default {
                 bannerxl: "600px",
                 bannerlg: "500px",
                 altura550px: "550px",
-                alturamax: "769px",
+                alturamax: "792.4px",
+                footeraltura: "52px",
             },
             borderColor: {
                 rosa: "#FF2171",

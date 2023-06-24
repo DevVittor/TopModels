@@ -25,37 +25,11 @@
                 </div>
             </div>
         </section>
-        <!--<section>
-            <div class=" w-full p-3 columns-1 bg-red-500 space-y-3 mx-auto gap-3
-            sm:columns-2
-            md:columns-3
-            lg:columns-4
-            xl:columns-5
-            2xl:columns-5">
-                @foreach($profile as $items)
-                    <div class="flex flex-col justify-end items-center">
-                        <a class="rounded-lg cursor-pointer" href="/events/{{$items->id}}">
-                            <img src="img/profileImg/{{$items->imageProfile}}" alt="">
-                        </a>
-                        <h2 class="absolute backdrop-blur-lg mb-2 w-auto text-center p-3 text-lg text-white font-semibold rounded-sm">{{$items->nome}}</h2>
-                    </div>
-                @endforeach
-            </div>
-        </section>-->
         <section>
-            <div class="grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 p-3 gap-3">
-                @foreach($profile as $items)    
-                <a href="/events/{{$items->id}}">
-                    <div class="flex flex-col justify-end items-center ">
-                        <div class="">
-                            <img class="h-96 w-64 object-cover " src="img/profileImg/{{$items->imageProfile}}" alt="">
-                        </div>
-                        <div class="p-3 backdrop-blur-xl text-center absolute">
-                            <h2 class="text-white font-bold text-base">{{$items->nome}}</h2>
-                            <span class="text-white font-light text-sm"><i class="bi bi-geo-alt-fill pr-2 text-red-600"></i>{{$items->Estado}}</span>
-                        </div>
-                    </div>
-                </a>
+            <div class="w-full m-auto columns-1 gap-3 2xl:columns-6 p-3 xl:columns-5 md:columns-4 sm:columns-3 ">
+                @foreach($profile as $items)
+                    <img class="max-w-full rounded-xl" src="/img/profileImg/{{$items->imageProfile}}" alt="">
+                </div>
                 @endforeach
             </div>
         </section>

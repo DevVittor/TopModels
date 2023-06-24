@@ -102,42 +102,98 @@
     
     </main>-->
 
-    <main class="">
-        <section class="">
-            <div class="flex items-center h-alturamax">
-                <div class="flex justify-center items-center w-56 h-full">
+    <main class="font-inter">
+    <section>
+        <div class="flex justify-between items-center h-auto flex-col bg-white p-5">
+            <div class="flex items-center justify-between w-full">
+                <div class="">
+                    <i class="fa-solid fa-arrow-left-long text-2xl"></i>
+                </div>
+                <div class="">
+                    <i class="fa-solid hover:cursor-pointer fa-triangle-exclamation text-2xl text-white pt-1 pb-1 pr-8 pl-8 rounded-sm shadow-md bg-red-600 "></i>
+                </div>
+            </div>
+            <div class="flex flex-col p-5 gap-3 h-auto">
+                <div class="border-2 border-gray-100 h-96 w-64 rounded-md shadow-lg">
+                    <img class="h-full w-full object-cover rounded-md shadow-lg" src="/img/profileImg/{{$profile->imageProfile}}" alt="">
+                </div>
+                <div class="absolute h-96 w-64 flex justify-end items-end p-3 z-10">
+                    <div class="bg-white flex justify-center items-center rounded-full h-5 w-5">
+                        <i class="fa-solid text-2xl fa-circle-check text-blue-500"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-medium capitalize">Vittor,</h2>
+                        <span class="text-lg font-light capitalize">25</span>
+                    </div>
+                    <div class="">
+                        <span class="text-sm font-light"><i class="fa-solid fa-location-dot text-red-600 pr-2"></i>Rio de Janeiro,Rj</span>
+                    </div>
+                </div>
+                <div class="w-64 ">
+                    <p class="text-black font-light text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cumque vel possimus quae iste voluptatum nesciunt nisi expedita voluptas a.</p>
+                </div>
+                <div class="flex flex-col w-64 gap-3">
+                    <h2 class="text-xl font-medium capitalize">Serviços:</h2>
                     <nav>
-                        <ul class="flex justify-center items-center flex-col gap-5 text-white font-semibold text-lg">
-                            <li><a href="#">Perfil</a></li>
-                            <li><a href="#">Fotos</a></li>
-                            <li><a href="#">Vídeos</a></li>
-                            <li><a href="#">Serviços</a></li>
-                            <li><a href="#">Corpo</a></li>
-                            <li><a href="#">Atendimento</a></li>
+                        <ul class="flex flex-wrap items-center gap-1.5">
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li><li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
+                            <li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li><li class="pt-1 pb-1 pr-4 pl-4 rounded-sm border-2 border-gray-100"><span class="font-light text-sm">Teste</span></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="flex w-full h-full">
-                    <div class="flex justify-center items-center p-5 h-full w-1/3">
-                        <img class="h-full w-full object-cover rounded-md" src="/img/profileImg/{{$profile->imageProfile}}" alt="">
-                    </div>
-                    <div class="p-5 flex flex-col w-full gap-3">
-                        <h2 class="text-white text-4xl font-bold">{{$profile->nome}}</h2>
-                        <h4 class="text-white text-base font-light"><i class="bi bi-geo-alt-fill pr-2 text-red-600"></i>{{$profile->Estado}}</h4>
-                        <p class="text-white text-base font-normal mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, architecto sapiente aperiam consequatur cumque maiores atque? Ipsam adipisci velit culpa, ex totam libero, maxime enim, ea dolores omnis impedit! Repellendus optio culpa non, commodi odit nulla vero dolor, quaerat, voluptas quidem architecto dignissimos voluptatibus nemo? Ratione magni atque impedit, quia repellendus explicabo voluptates recusandae obcaecati dolorum molestiae ducimus quam dicta! Quidem magnam ex enim laborum deserunt aperiam quis cum ipsa harum qui vitae mollitia expedita, nihil illo? Quasi eveniet laudantium pariatur sequi debitis rem aspernatur neque nulla error sit explicabo illo ipsam similique enim quaerat laborum, alias, id dolorem iusto repellat eligendi corporis. Fuga quas dolor sapiente enim nobis mollitia inventore iure, temporibus harum dolore debitis delectus hic. Ad et similique unde, facere, quos quidem eos placeat praesentium, minima distinctio nisi voluptatum deserunt commodi! Explicabo unde perspiciatis blanditiis eveniet obcaecati atque doloremque voluptatem inventore quas maiores reprehenderit consectetur at, provident aspernatur soluta. Perferendis inventore esse saepe est optio quod quisquam, magni autem earum doloribus ad possimus aliquam odit amet? Quo culpa nam ut accusamus, unde neque ad modi earum perspiciatis blanditiis, illum similique? Laborum quis voluptatem est error dicta velit sed sint exercitationem unde quia, atque dignissimos itaque necessitatibus distinctio quod culpa, perferendis in hic soluta, assumenda corrupti? Minus beatae eligendi maxime accusamus tenetur excepturi placeat optio expedita, quae voluptates nihil suscipit voluptas illo quam, veritatis autem recusandae commodi sint. Qui omnis alias distinctio molestiae consectetur porro ullam provident quos impedit. Ad aliquam ipsam exercitationem quia! At assumenda cumque perspiciatis atque est aperiam animi soluta quia ullam corporis doloremque rem esse saepe amet asperiores quos accusamus minus, molestias consequatur ipsam, mollitia sequi non dignissimos debitis! Dolorum delectus neque consequatur tempora inventore harum excepturi laboriosam nostrum sit, expedita ipsam, architecto sequi, doloribus repudiandae et ut? Fuga accusamus obcaecati optio nisi at?</p>
-                        <div class="mt-10">
-                            <nav>
-                                <ul class="flex items-center gap-3 text-2xl text-white">
-                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                                </ul>
-                            </nav>
+                <div class="w-64 h-auto flex flex-col gap-3">
+                    <h2 class="text-xl font-medium capitalize">Corpo:</h2>
+                    <div class="flex flex-col  flex-wrap w-64 gap-3">
+                        <div class="flex justify-between items-center  p-3 rounded-md bg-gray text-black">
+                            <h2>Casal</h2>
+                            <span>Não</span>
+                        </div>
+                        <div class="flex justify-between items-center  p-3 rounded-md bg-gray text-black">
+                            <h2>Casal</h2>
+                            <span>Não</span>
+                        </div>
+                        <div class="flex justify-between items-center  p-3 rounded-md bg-gray text-black">
+                            <h2>Casal</h2>
+                            <span>Não</span>
+                        </div>
+                        <div class="flex justify-between items-center  p-3 rounded-md bg-gray text-black">
+                            <h2>Casal</h2>
+                            <span>Não</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="flex flex-col gap-5 p-5 justify-center items-center w-full h-auto sticky bottom-0 border-t-2 bg-black">
+            <div class="flex flex-col items-center gap-3">
+                <h2 class="text-2xl text-white font-medium capitalize">Segue Lá</h2>
+                <ul class="flex items-center gap-3 text-white text-xl">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-5">
+                <span class="pr-5 pl-5 pt-1.5 pb-1.5 rounded-sm text-white font-semibold bg-red-600 border-2 border-red-600">R$ 234/H</span>
+                <a class="pr-5 pl-5 pt-1.5 pb-1.5 rounded-sm text-black font-semibold bg-white border-2 border-white" href="#" target="_blank"><i class="fa-brands fa-whatsapp pr-2"></i>Conversar</a>
+            </div>
+        </div>
+    </section>
     </main>
 
 @endsection

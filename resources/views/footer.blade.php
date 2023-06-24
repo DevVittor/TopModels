@@ -7,6 +7,9 @@
     container-footer-xl 
     container-footer-2xl ">
         <div class="">
+            <a class="font-light text-white" href="#">Termos e condições</a>
+        </div>
+        <div class="">
             <span class="font-light text-white">Todos os direitos reservados | 2020 - 2023</span>
         </div>
         <div class="block">
