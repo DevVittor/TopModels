@@ -107,14 +107,14 @@
         <div class="flex justify-between items-center h-auto flex-col bg-white p-5">
             <div class="flex items-center justify-between w-full">
                 <div class="">
-                    <i class="fa-solid fa-arrow-left-long text-2xl"></i>
+                    <a href="/acompanhantes"><i class="fa-solid fa-arrow-left-long text-2xl"></i></a>
                 </div>
                 <div class="">
                     <i class="fa-solid hover:cursor-pointer fa-triangle-exclamation text-2xl text-white pt-1 pb-1 pr-8 pl-8 rounded-sm shadow-md bg-red-600 "></i>
                 </div>
             </div>
             <div class="flex flex-col p-5 gap-3 h-auto">
-                <div class="border-2 border-gray-100 h-96 w-64 rounded-md shadow-lg">
+                <div class="border-2 border-gray-100 h-96 max-h-96 max-w-maxCardImg rounded-md shadow-lg">
                     <img class="h-full w-full object-cover rounded-md shadow-lg" src="/img/profileImg/{{$profile->imageProfile}}" alt="">
                 </div>
                 <div class="absolute h-96 w-64 flex justify-end items-end p-3 z-10">

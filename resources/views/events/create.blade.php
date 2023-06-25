@@ -424,24 +424,11 @@
     let inputImg = document.getElementById('inputImage');
     inputImg.addEventListener("change", (e, limite = 2048) => {
     let file = inputImg.files[0];
-    if (file) {
-        let reader = new FileReader();
-        reader.onload = function (event) {
-        let image = new Image();
-        image.src = event.target.result;
-        image.onload = function () {
-            let altura = this.height;
-            let largura = this.width;
-            if (file.size > limite && altura > largura) {
-            alert(`Upload Completo Altura: ${altura} e Largura: ${largura}`);
-            } else {
-            alert("Só é permitido imagem com até 2Mb de tamanho e imagens na vertical");
-            }
+        if (file.size > limite ) {
+            console.log(`Upload Completo!`);
+        } else {
+            console.log(`Só é permitido imagem com mais de 2Mb de tamanho e a sua imagem tem ${file.size}`);
         };
-        };
-        reader.readAsDataURL(file);
-    }
-    e.preventDefault();
     });
 
     </script>
