@@ -128,6 +128,7 @@
                         <span class="text-lg font-light capitalize">25</span>
                     </div>
                     <div class="">
+                        <h5>Criado por: {{$profileOwner['name']}}</h5>
                         <span class="text-sm font-light"><i class="fa-solid fa-location-dot text-red-600 pr-2"></i>Rio de Janeiro,Rj</span>
                     </div>
                 </div>

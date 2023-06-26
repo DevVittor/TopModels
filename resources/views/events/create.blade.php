@@ -4,6 +4,21 @@
 
 @section('content')
 
+
+    @foreach($ids as $event)
+    <h1 class="text-white">{{ $event->id }}</h1>
+    @if($user_id == $event->id)
+    <h1 class="text-white">O usuario logado tem um perfil criado</h1>
+    @php
+        header("Location: /perfilCriado");
+        exit;
+    @endphp
+    @else
+    <h1 class="text-white">O usuario logado não tem um perfil criado </h1>
+    <a class="text-white" href="/events/create">Criar Perfil</a>
+    @endif
+    @endforeach
+
     <main class="font-inter bg-gray"> 
         <section>
             <form action="/events" method="post" enctype="multipart/form-data">

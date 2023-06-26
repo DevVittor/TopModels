@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 #use Illuminate\Database\QueryException;
 use App\Models\Event;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
@@ -30,7 +32,11 @@ class EventController extends Controller
     }
     public function create()
     {
-        return view('events.create');
+        $user_id = Auth::id();
+
+        $ids = Event::where('user_id', $user_id)->get();
+        return view('events.create', ['user_id' => $user_id, 'ids' => $ids]);
+        #return view('events.create');
     }
     public function store(Request $request)
     {
@@ -54,6 +60,9 @@ class EventController extends Controller
             $profile->imageProfile = $imageName;
         }
 
+        $user = auth()->user();
+        $profile->user_id = $user->id;
+
         $profile->save();
 
 
@@ -66,6 +75,23 @@ class EventController extends Controller
     public function show($id)
     {
         $profile = Event::findOrFail($id);
-        return view('events.profile', ['profile' => $profile]);
+
+        $profileOwner = User::where('id', $profile->user_id)->first()->toArray();
+
+        return view('events.profile', ['profile' => $profile, 'profileOwner' => $profileOwner]);
+    }
+    public function painel()
+    {
+        /*$user = auth()->user();
+        $profile = $user->id;*/
+
+        $user_id = Auth::id();
+
+        $ids = Event::where('user_id', $user_id)->get();
+        return view('/painel', ['user_id' => $user_id, 'ids' => $ids]);
+    }
+    public function perfilCriado()
+    {
+        return view('/perfilCriado');
     }
 }
