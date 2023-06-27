@@ -6,7 +6,7 @@
     <main class="font-inter bg-fundoBlack">
         <section>
             <div class="h-bannerxl flex justify-center items-center">
-                <img class="h-full w-full object-contain" src="https://images.pexels.com/photos/230986/pexels-photo-230986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/230986/pexels-photo-230986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
             </div>
         </section>
         <section>

@@ -90,13 +90,19 @@ class EventController extends Controller
     }
     public function dashboard()
     {
-        /*$user = auth()->user();
-        $profile = $user->id;*/
 
         $user_id = Auth::id();
 
-        $ids = Event::where('user_id', $user_id)->get();
-        return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids]);
+        #$ids = Event::where('user_id', $user_id)->get();
+        $ids = Event::where('user_id', $user_id)->pluck('user_id');
+
+        if (count($ids) > 0) {
+            $all = Event::all();
+        } else {
+            return redirect('/events.create');
+        }
+
+        return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
     }
     public function perfilCriado()
     {
@@ -106,5 +112,33 @@ class EventController extends Controller
     {
         Event::findOrFail($id)->delete();
         return redirect('/acompanhantes')->with('msg', 'Perfil excluido com sucesso!');
+    }
+    public function edit()
+    {
+        #$user_id = Auth::id();
+
+        #$profile = Event::all();
+        $profile = Event::first();
+
+        #echo $profile;
+        return view('/events/edit', ['profile' => $profile]);
+    }
+    public function update(Request $request)
+    {
+        $data = $request->all();
+        // Image Upload
+        if ($request->hasFile('imageProfile') && $request->file('imageProfile')->isValid()) {
+            $requestImage = $request->file('imageProfile');
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $requestImage->move(public_path('img/profileImg'), $imageName);
+            $data['imageProfile'] = $imageName;
+        }
+        #$user_id = Auth::id();
+        $userId = $request->user_id;
+        $event = Event::where('user_id', $userId)->first();
+        $event->update($data);
+
+        return redirect('/dashboard');
     }
 }

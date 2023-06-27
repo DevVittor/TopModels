@@ -8,7 +8,9 @@ Route::get('/', [EventController::class, 'index']);
 Route::get('/acompanhantes', [EventController::class, 'acompanhantes']);
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
 Route::get('/events/{user_id}', [EventController::class, 'show']);
-Route::delete('/events/{user_id}', [EventController::class, 'destroy']);
+Route::delete('/events/{user_id}', [EventController::class, 'destroy'])->middleware('auth');
+Route::get('/events/edit/{user_id}', [EventController::class, 'edit'])->middleware('auth');
+Route::put('/events/update/{user_id}', [EventController::class, 'update'])->middleware('auth');
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/planos', [EventController::class, 'planos']);
 
