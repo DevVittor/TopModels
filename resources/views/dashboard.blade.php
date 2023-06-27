@@ -15,6 +15,16 @@
             <h1>O usuario logado não tem um perfil criado </h1>
             <a href="/events/create">Criar Perfil</a>
             @endif
+
+            <form action="/events/{{$event->id}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Excluir Perfil</button>
+            </form>
+
         @endforeach
     @endif
+
+    
+
 @endsection

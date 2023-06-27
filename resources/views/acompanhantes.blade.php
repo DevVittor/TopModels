@@ -37,7 +37,7 @@
         <section>
             <div class="w-full m-auto columns-1 gap-3 2xl:columns-6 p-3 xl:columns-5 md:columns-4 sm:columns-3 bg-gray">
                 @foreach($profile as $items)
-                <a href="/events/{{$items->id}}">
+                <a href="/events/{{$items->user_id}}">
                     <div class="mb-2.5 w-full break-inside-avoid">
                         <img class="max-w-full rounded-xl" src="/img/profileImg/{{$items->imageProfile}}" alt="">
                     </div>

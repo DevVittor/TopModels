@@ -6,9 +6,6 @@
     display: none;
 }
 @layer components {
-    body {
-        @apply bg-white;
-    }
     /*Scrollbar*/
     body::-webkit-scrollbar {
         @apply w-4;

@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('profile', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();
+            #$table->foreignId('user_id')->constrained();//Antigo
+            $table->foreignId('user_id')->first()->constrained();
         });
     }
 

@@ -7,7 +7,8 @@ Route::get('/', [EventController::class, 'index']);
 
 Route::get('/acompanhantes', [EventController::class, 'acompanhantes']);
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
-Route::get('/events/{id}', [EventController::class, 'show']);
+Route::get('/events/{user_id}', [EventController::class, 'show']);
+Route::delete('/events/{user_id}', [EventController::class, 'destroy']);
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/planos', [EventController::class, 'planos']);
 
@@ -17,7 +18,7 @@ Route::fallback(function () {
     return view('error404');
 });
 
-Route::get('/painel', [EventController::class, 'painel'])->middleware('auth');
+Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 
 /*Route::middleware([
     'auth:sanctum',

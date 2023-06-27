@@ -34,8 +34,16 @@ class EventController extends Controller
     {
         $user_id = Auth::id();
 
-        $ids = Event::where('user_id', $user_id)->get();
-        return view('events.create', ['user_id' => $user_id, 'ids' => $ids]);
+        #$profile = User::findOrFail($id);
+
+        #$info = Event::all();
+        $ids = Event::where('user_id', $user_id)->pluck('user_id');
+        $total = count($ids);
+        if (count($ids) > 0) {
+            return redirect('/perfilCriado');
+        } else {
+            return view('events.create', ['user_id' => $user_id, 'ids' => $ids]);
+        }
         #return view('events.create');
     }
     public function store(Request $request)
@@ -62,9 +70,7 @@ class EventController extends Controller
 
         $user = auth()->user();
         $profile->user_id = $user->id;
-
         $profile->save();
-
 
         return redirect('/acompanhantes');
     }
@@ -72,15 +78,17 @@ class EventController extends Controller
     {
         return view('/planos');
     }
-    public function show($id)
+    public function show($user_id)
     {
-        $profile = Event::findOrFail($id);
-
-        $profileOwner = User::where('id', $profile->user_id)->first()->toArray();
-
-        return view('events.profile', ['profile' => $profile, 'profileOwner' => $profileOwner]);
+        $profile = User::findOrFail($user_id);
+        #$dados = Event::all();
+        $dados = Event::where('user_id', $user_id)->get();
+        return view('events.profile', [
+            'profile' => $profile,
+            'dados' => $dados,
+        ]);
     }
-    public function painel()
+    public function dashboard()
     {
         /*$user = auth()->user();
         $profile = $user->id;*/
@@ -88,10 +96,15 @@ class EventController extends Controller
         $user_id = Auth::id();
 
         $ids = Event::where('user_id', $user_id)->get();
-        return view('/painel', ['user_id' => $user_id, 'ids' => $ids]);
+        return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids]);
     }
     public function perfilCriado()
     {
         return view('/perfilCriado');
+    }
+    public function destroy($id)
+    {
+        Event::findOrFail($id)->delete();
+        return redirect('/acompanhantes')->with('msg', 'Perfil excluido com sucesso!');
     }
 }
