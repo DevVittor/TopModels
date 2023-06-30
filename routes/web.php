@@ -14,20 +14,10 @@ Route::put('/events/update/{user_id}', [EventController::class, 'update'])->midd
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/planos', [EventController::class, 'planos']);
 
-Route::get('/perfilCriado', [EventController::class, 'perfilCriado']);
+Route::get('/perfilCriado', [EventController::class, 'perfilCriado'])->middleware('auth');
 
 Route::fallback(function () {
     return view('error404');
 });
 
-Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
-
-/*Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});*/
+Route::get('/painel', [EventController::class, 'painel'])->middleware('auth');

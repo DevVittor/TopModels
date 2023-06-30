@@ -12,7 +12,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('inicio');
     }
     public function acompanhantes()
     {
@@ -88,7 +88,7 @@ class EventController extends Controller
             'dados' => $dados,
         ]);
     }
-    public function dashboard()
+    public function painel()
     {
 
         $user_id = Auth::id();
@@ -102,7 +102,8 @@ class EventController extends Controller
             return redirect('/events.create');
         }
 
-        return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
+        #return view('/dashboard', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
+        return view('/painel', ['user_id' => $user_id, 'ids' => $ids, 'all' => $all]);
     }
     public function perfilCriado()
     {
@@ -139,6 +140,6 @@ class EventController extends Controller
         $event = Event::where('user_id', $userId)->first();
         $event->update($data);
 
-        return redirect('/dashboard');
+        return redirect('/painel');
     }
 }

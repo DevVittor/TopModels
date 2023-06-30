@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','ABRIME - Página Inicial')
+@section('title','ABRIME - Início')
 
 @section('content')
 
