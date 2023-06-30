@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col md:flex-row 2xl:flex-col gap-5 items-center justify-center">
-                        <div class="w-full flex justify-center items-center bg-white rounded-full pr-10 pt-2 pb-2 pl-10">
+                        <div class=" w-full flex justify-center items-center bg-white rounded-full pr-10 pt-2 pb-2 pl-10">
                             <h2>Detalhes</h2>
                         </div>
                         <div class="w-full flex justify-center items-center bg-white rounded-full pr-10 pt-2 pb-2 pl-10">
@@ -44,6 +44,21 @@
                         <div class="w-full flex justify-center items-center bg-white rounded-full pr-10 pt-2 pb-2 pl-10">
                             <h2>Menu</h2>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="w-full flex justify-center items-center pb-5 md:bg-divs 2xl:bg-dark">
+                <div class="w-2/5 flex flex-col md:flex-row text-white 2xl:flex-row gap-5 items-center justify-center">
+                    <div class="border-2 border-white w-full hover:cursor-pointer flex justify-center items-center bg-divs rounded-sm pr-10 pt-2 pb-2 pl-10">
+                        <h2 class="font-semibold text-lg">Fotos</h2>
+                    </div>
+                    <div class="border-2 border-white w-full hover:cursor-pointer flex justify-center items-center bg-divs rounded-sm pr-10 pt-2 pb-2 pl-10">
+                        <h2 class="font-semibold text-lg">Vídeos</h2>
+                    </div>
+                    <div class="border-2 border-white w-full hover:cursor-pointer flex justify-center items-center bg-divs rounded-sm pr-10 pt-2 pb-2 pl-10">
+                        <h2 class="font-semibold text-lg">Local</h2>
                     </div>
                 </div>
             </div>
