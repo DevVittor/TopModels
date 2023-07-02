@@ -20,20 +20,20 @@
                     <div class="flex flex-col items-center lg:items-start 2xl:items-start md:items-center justify-start h-full w-3/5 text-white">
                         <div class="">
                             @foreach($dados as $user)
-                            <h2 class="text-xl md:text-2xl 2xl:text-3xl text-white font-semibold capitalize">{{$user->nome  }}, 24</h2>
+                                <h2 class="text-xl md:text-2xl 2xl:text-3xl text-white font-semibold capitalize">{{$user->nome  }}, 24</h2>
                             @endforeach
                         </div>
                         <div class="flex items-center gap-3 pt-2 text-gray-300">
                             @foreach($dados as $user)
-                            <h4 class="font-medium text-sm">Homem</h4>
-                            <span class="">|</span>
-                            <h4 class="font-medium text-sm"><i class="bi bi-geo-alt-fill pr-2 text-red-600"></i>{{$user->Estado}}</h4>
+                                <h4 class="font-medium text-sm">Homem</h4>
+                                <span class="">|</span>
+                                <h4 class="font-medium text-sm"><i class="bi bi-geo-alt-fill pr-2 text-red-600"></i>{{$user->Estado}}</h4>
                             @endforeach
                         </div>
                         <div class="pt-5 text-center md:text-center lg:text-left 2xl:text-left">
-                           @foreach($dados as $user)
-                           <p class="font-light text-base">{{$user->description}}</p>
-                           @endforeach
+                            @foreach($dados as $user)
+                                <p class="font-light text-base">{{$user->description}}</p>
+                            @endforeach
                         </div>
                         <div class="w-full">
                             <nav>
